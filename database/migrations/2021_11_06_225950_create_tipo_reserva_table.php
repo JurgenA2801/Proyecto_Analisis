@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNavesTable extends Migration
+class CreateTipoReservaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateNavesTable extends Migration
      */
     public function up()
     {
-        Schema::create('naves', function (Blueprint $table) {
+        Schema::create('tipo_reserva', function (Blueprint $table) {
             $table->id();
-            $table->integer('Capacidad_pasajeros');
-            $table->integer('Capacidad_carga');
-            
+            $table->string("tipo");
         });
     }
 
@@ -28,6 +26,6 @@ class CreateNavesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('naves');
+        Schema::dropIfExists('tipo_reserva');
     }
 }

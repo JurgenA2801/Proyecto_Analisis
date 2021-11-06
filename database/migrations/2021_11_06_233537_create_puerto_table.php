@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePuertosTable extends Migration
+class CreatePuertoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreatePuertosTable extends Migration
      */
     public function up()
     {
-        Schema::create('puertos', function (Blueprint $table) {
+        Schema::create('puerto', function (Blueprint $table) {
             $table->id();
-            $table->integer('Id_itinerario');
-            $table->string('nombre');
+            $table->unsignedBigInteger('idItinerario');
+            $table->foreign('idItinerario')->references('id')->on('itinerario');
+            $table->string('nombre'); 
         });
     }
 
@@ -27,6 +28,6 @@ class CreatePuertosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('puertos');
+        Schema::dropIfExists('puerto');
     }
 }

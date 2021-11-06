@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateItinerariosTable extends Migration
+class CreateItinerarioTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateItinerariosTable extends Migration
      */
     public function up()
     {
-        Schema::create('itinerarios', function (Blueprint $table) {
+        Schema::create('itinerario', function (Blueprint $table) {
             $table->id();
-            $table->integer('Id_nave');           
-            $table->Datetime('Inicio');
-            $table->Datetime('Final');
+            $table->unsignedBigInteger('idNave');
+            $table->foreign('idNave')->references('id')->on('nave');
+            $table->Datetime('fechaInicio');
+            $table->Datetime('fechaFinal');
+
 
         });
     }
@@ -29,6 +31,6 @@ class CreateItinerariosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('itinerarios');
+        Schema::dropIfExists('itinerario');
     }
 }

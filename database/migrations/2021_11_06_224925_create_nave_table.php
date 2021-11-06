@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReservasTable extends Migration
+class CreateNaveTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateReservasTable extends Migration
      */
     public function up()
     {
-        Schema::create('reservas', function (Blueprint $table) {
+        Schema::create('nave', function (Blueprint $table) {
             $table->id();
-            $table->integer('Id_Nave');
-            $table->integer('Id_Tipo_Reserva');
-            $table->double('precio');
-            
+            $table->integer("capacidadPasajeros");
+            $table->integer("capacidadCarga");
         });
     }
 
@@ -29,6 +27,6 @@ class CreateReservasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reservas');
+        Schema::dropIfExists('nave');
     }
 }
