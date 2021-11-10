@@ -19,6 +19,8 @@ class CreateItinerarioTable extends Migration
             $table->foreign('idNave')->references('id')->on('nave');
             $table->Datetime('fechaInicio');
             $table->Datetime('fechaFinal');
+            $table-> timestamps();
+           
 
 
         });

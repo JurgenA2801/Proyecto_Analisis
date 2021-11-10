@@ -16,6 +16,7 @@ class CreateTipoReservaTable extends Migration
         Schema::create('tipo_reserva', function (Blueprint $table) {
             $table->id();
             $table->string("tipo");
+            $table->timestamps();
         });
     }
 

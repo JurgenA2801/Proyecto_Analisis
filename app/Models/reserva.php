@@ -9,4 +9,12 @@ class reserva extends Model
 {
     use HasFactory; 
     protected $table = "reserva";
+
+    public function listar(){ 
+
+        $listaDeReserva = reserva::all();
+        return $listaDeReserva;
+
+
+    }
 }

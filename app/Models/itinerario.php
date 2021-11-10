@@ -8,5 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class itinerario extends Model
 {
     use HasFactory; 
-    protected $table = "itinerario";
+    protected $table = "itinerario"; 
+
+    public function listar(){ 
+
+        $listaDeItinerarios = itinerario::all();
+        return $listaDeItinerarios;
+
+
+    }
+
 }

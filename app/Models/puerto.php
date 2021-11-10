@@ -10,6 +10,14 @@ class puerto extends Model
     use HasFactory;
     protected $table = 'puerto';
 
+    public function listar(){ 
+
+        $listaDePuertos = puerto::all();
+        return $listaDePuertos;
+
+
+    }
+
 }
 
 

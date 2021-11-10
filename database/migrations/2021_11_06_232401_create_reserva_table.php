@@ -20,6 +20,7 @@ class CreateReservaTable extends Migration
             $table->unsignedBigInteger('idTipoReserva');
             $table->foreign('idTipoReserva')->references('id')->on('tipo_reserva');
             $table->double('precio');
+            $table->timestamps();
         });
     }
 

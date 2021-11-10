@@ -9,4 +9,12 @@ class tipoServicio extends Model
 {
     use HasFactory;
     protected $table = 'tipo_reserva';
+
+    public function listar(){ 
+
+        $listaDeTipoServ = reserva::all();
+        return $listaDeTipoServ;
+
+
+    }
 }

@@ -1,0 +1,62 @@
+body{
+    margin: 0px;
+}
+.encabesado{
+    position: absolute;
+    width: 1152px;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    
+    background: #1083EE;
+
+}
+.logo{
+    /* Logo_navieraPeP */
+    position: absolute;
+    width: 221px;
+    height: 176px;
+    left: -3px;
+    top: -27px;
+    
+    background: url(.png);
+
+}
+
+.inicio{position: absolute;
+    width: 193px;
+    height: 48px;
+    left: 719px;
+    top: 27px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 20px;
+    /* or 83% */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FF7F27;}
+.fondo{
+    position: absolute;
+width: 1152px;
+height: 505px;
+left: 0px;
+top: -1px;
+
+background: url(.png);
+}
+.cuerpo{display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    
+    position: absolute;
+    width: 304px;
+    height: 407px;
+    left: 820px;
+    top: 49px;}

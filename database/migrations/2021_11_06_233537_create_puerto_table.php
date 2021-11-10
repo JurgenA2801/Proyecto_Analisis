@@ -18,6 +18,7 @@ class CreatePuertoTable extends Migration
             $table->unsignedBigInteger('idItinerario');
             $table->foreign('idItinerario')->references('id')->on('itinerario');
             $table->string('nombre'); 
+            $table->timestamps();
         });
     }
 
