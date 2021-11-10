@@ -17,6 +17,8 @@ class CreateNaveTable extends Migration
             $table->id();
             $table->integer("capacidadPasajeros");
             $table->integer("capacidadCarga");
+            $table->timestamps();
+            
         });
     }
 

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\NaveController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VentasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +17,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+}); 
+
+Route::get('nave', [NaveController::class, 'index']);
+Route::get('itinerario', [ItinerarioController::class, 'index']);
+Route::get('venta', [ReservasController::class, 'index']);
+Route::get('reserva', [VentasController::class, 'index']); 
+Route::get('principal', [VentasController::class, 'index']);
+Route::get('inicioSesion', [VentasController::class, 'index']);
+
