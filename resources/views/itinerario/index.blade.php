@@ -1,3 +1,6 @@
+@extends('Layouts/plantilla')
+
+@section('contenido')
 <title>Lista de itinerarios</title>
 <h1>Itinerarios</h1>
 <ul>
@@ -10,6 +13,6 @@
 </ul>
 
 {{$listaDeItinerarios->links()}}
-
+@endsection
 
 

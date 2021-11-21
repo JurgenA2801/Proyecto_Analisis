@@ -1,3 +1,11 @@
+@extends('Layouts/plantilla')
+
+@section('barraNavegacion')
+
+@endsection 
+
+@section('contenido')
+
 <title>Lista de puertos</title>
 <h1>Puertos</h1>
 <ul>
@@ -10,6 +18,8 @@
 </ul>
 
 {{$listaDePuertos->links()}}
+
+@endsection 
 
 
 

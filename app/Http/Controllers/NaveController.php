@@ -14,4 +14,9 @@ class NaveController extends Controller
 
 
     }
+
+    //public function parametro($id){ 
+
+        //return "Valor pasado: $id";
+    //}
 }

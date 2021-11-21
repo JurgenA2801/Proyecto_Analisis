@@ -1,3 +1,11 @@
+@extends('Layouts/plantilla')
+
+@section('barraNavegacion')
+
+@endsection
+
+
+@section('contenido')
 <title>Lista de reservas</title>
 <h1>Reservas</h1>
 <ul>
@@ -10,6 +18,6 @@
 </ul>
 
 {{$listaDeReserva->links()}}
-
+@endsection
 
 
