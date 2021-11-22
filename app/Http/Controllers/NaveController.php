@@ -9,14 +9,24 @@ class NaveController extends Controller
 {
     public function index(){ 
 
-        $listaDeNaves = nave::paginate();
+        $listaDeNaves = nave::all();
         return view('nave.index', compact('listaDeNaves'));
 
 
     }
 
-    //public function parametro($id){ 
+    public function create(){ 
+        $nuevaNave = new nave(); 
+        $nuevaNave -> capacidadCarga = 30; 
+        $nuevaNave -> capacidadPasajeros = 35;
+        $nuevaNave -> save();
+    }
 
-        //return "Valor pasado: $id";
-    //}
+    public function update($id){ 
+        $actualizarNave = nave::find($id);
+        $actualizarNave-> capacidadCarga = 10;
+        $actualizarNave->save();
+
+    }
+
 }

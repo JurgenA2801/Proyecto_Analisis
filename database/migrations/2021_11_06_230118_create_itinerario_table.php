@@ -15,7 +15,7 @@ class CreateItinerarioTable extends Migration
     {
         Schema::create('itinerario', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('idNave')->nullable();
+            $table->unsignedBigInteger('idNave')-> nullable();
             $table->foreign('idNave')->references('id')->on('nave');
             $table->Datetime('fechaInicio');
             $table->Datetime('fechaFinal');

@@ -10,13 +10,12 @@
 <ul>
 
 @foreach($listaDeNaves as $item)
-    {{$item}}
+    {{$item -> capacidadCarga}}
+    {{$item -> capacidadPasajeros}} <br>
 
 @endforeach
 
 </ul>
-
-{{$listaDeNaves->links()}}
 @endsection
 
 

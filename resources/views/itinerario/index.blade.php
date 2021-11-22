@@ -12,7 +12,7 @@
 
 </ul>
 
-{{$listaDeItinerarios->links()}}
+
 @endsection
 
 
