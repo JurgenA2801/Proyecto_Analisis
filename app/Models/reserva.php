@@ -16,5 +16,12 @@ class reserva extends Model
         return $listaDeReserva;
 
 
-    }
+    } 
+
+    public function venta () { 
+
+        return $this->hasOne(venta::class, "idReserva");
+
+    } 
+
 }

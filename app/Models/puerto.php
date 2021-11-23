@@ -16,7 +16,14 @@ class puerto extends Model
         return $listaDePuertos;
 
 
-    }
+    } 
+
+    public function manifiesto()
+    {
+        return $this->hasMany(manifiesto::class, "idPuerto");
+    } 
+
+    
 
 }
 

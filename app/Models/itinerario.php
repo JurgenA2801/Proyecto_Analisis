@@ -21,4 +21,11 @@ class itinerario extends Model
 
     }
 
+    //un itinerario pasa por muchos puertos
+    public function puerto () { 
+
+    return $this->hasMany(puerto::class, "idItinerario");
+
+    }
+
 }

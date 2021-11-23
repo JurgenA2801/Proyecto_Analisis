@@ -20,8 +20,22 @@ class nave extends Model
 
     }
 
+//una nave tiene muchos itinerarios
     public function itinerario()
     {
-        return $this->hasOne(itinerario::class, "idNave");
-    }
+        return $this->hasMany(itinerario::class, "idNave");
+    } 
+
+//una nave puede tener muchas reservas de pasajeros o carga
+    public function reserva()
+    {
+        return $this->hasMany(reserva::class, "idNave");
+    } 
+    
+//una nave puede tener muchos manifiestos de sus pasajeros o de la carga
+    public function manifiesto()
+    {
+        return $this->hasMany(manifiesto::class, "idNave");
+    } 
+
 }

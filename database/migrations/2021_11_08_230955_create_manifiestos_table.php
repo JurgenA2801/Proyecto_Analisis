@@ -16,13 +16,12 @@ class CreateManifiestosTable extends Migration
         Schema::create('manifiestos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('idPuertoOrigen');
-            $table->foreign('idPuertoOrigen')->references('id')->on('puerto');
-            $table->unsignedBigInteger('idPuertoDestino');
-            $table->foreign('idPuertoDestino')->references('id')->on('puerto');
+            $table->foreign('idPuertoOrigen')->references('id')->on('puerto');            
             $table->string('tipo'); 
-            $table->Datetime('fecha');
+            $table->dateTime('fecha');
             $table->unsignedBigInteger('idNave');
-            $table->foreign('idNave')->references('id')->on('nave');
+            $table->foreign('idNave')->references('id')->on('nave'); 
+            $table->timestamps();
 
         });
     }

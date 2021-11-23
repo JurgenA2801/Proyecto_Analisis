@@ -17,8 +17,8 @@ class NaveController extends Controller
 
     public function create(){ 
         $nuevaNave = new nave(); 
-        $nuevaNave -> capacidadCarga = 30; 
-        $nuevaNave -> capacidadPasajeros = 35;
+        $nuevaNave -> capacidadCarga = 10; 
+        $nuevaNave -> capacidadPasajeros = 25;
         $nuevaNave -> save();
     }
 

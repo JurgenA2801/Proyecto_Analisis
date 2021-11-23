@@ -8,14 +8,10 @@ class ReservasController extends Controller
 {
     public function index(){ 
 
-       
-
         $listaDeReserva = reserva::paginate();
         return view('reserva.index', compact('listaDeReserva'));
-
-
-
     }
+    
 
 
 }

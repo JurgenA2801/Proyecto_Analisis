@@ -21,7 +21,7 @@ Route::get('naveUpdate/{id}', [NaveController::class, 'update']) -> name('naveUp
 
 //Rutas itinerario
 Route::get('itinerario', [ItinerarioController::class, 'index']) -> name('itinerario');
-Route::get('itinerarioX', [ItinerarioController::class, 'one']);    
+Route::get('itinerario_nave', [ItinerarioController::class, 'itinerario_nave']);    
    
 
 
@@ -32,9 +32,12 @@ Route::get('venta', [ReservasController::class, 'index']);
 
 //Rutas puerto
 Route::get('puerto', [puertoController::class, 'index']) -> name('puerto'); 
+Route::get('puertobuscar', [puertoController::class, 'buscar']); 
 
 //Rutas reserva
 Route::get('reserva', [ReservasController::class, 'index']) -> name('reserva'); 
+
+
 
 
 

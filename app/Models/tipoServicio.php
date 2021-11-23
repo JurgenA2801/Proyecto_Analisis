@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\reserva;
 
 class tipoServicio extends Model
 {
@@ -16,5 +17,11 @@ class tipoServicio extends Model
         return $listaDeTipoServ;
 
 
+    }  
+//un tipo de servicio tiene una reserva asociada
+    public function reserva()
+    {
+        return $this->hasOne(reserva::class, "idTipoReserva");
     }
+
 }

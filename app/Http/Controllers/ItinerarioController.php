@@ -16,9 +16,15 @@ class ItinerarioController extends Controller
 
     } 
 
-    public function one(){ 
-        
-        return nave::find(1)->itinerario;
+    public function itinerario_nave(){  
 
-    }
+    $itinerarios = nave::find(1)->itinerario;
+    return view('itinerario.informes', compact('itinerarios'));
+
+    } 
+
+    //uno a uno
+   /* public function one($id){         
+        return nave::find($id)->itinerario;
+    } */
 }
