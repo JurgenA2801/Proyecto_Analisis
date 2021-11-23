@@ -45,4 +45,6 @@ Route::get('reserva', [ReservasController::class, 'index']) -> name('reserva');
 //Route::get('inicioSesion', [iniciarSesionController::class, 'index']); 
 
 //Route::get('/naves/{id}', [NaveController::class, 'parametro']);//
-
+//Rutas de navmanifiestoe
+Route::get('manifiesto', [manifiestoController::class, 'index']) ->name('manifiesto');
+Route::get('manifiestoInsertar', [manifiestoController::class, 'create']) ->name('manifiestoCreate');

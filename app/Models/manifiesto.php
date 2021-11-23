@@ -8,5 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class manifiesto extends Model
 {
     use HasFactory;
-    
+   
+    /*protected $fillable = ['atributo', 'atributo']; */
+    protected $table = "manifiesto"; 
+   
+
+    public function listar(){ 
+
+        $manifiesto = manifiesto::all();
+        return $manifiesto;
+
+
+    }
 }
