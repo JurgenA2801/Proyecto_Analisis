@@ -20,9 +20,7 @@
     <tr>
       <td>{{$item -> capacidadCarga	}}</td>
       <td>{{$item -> capacidadPasajeros}}</td>
-    </tr>
-    
-     
+    </tr>     
 @endforeach
   </tbody>
 </table>

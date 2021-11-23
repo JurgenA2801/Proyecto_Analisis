@@ -15,7 +15,8 @@ Route::get('/', function () {
 }); 
 //Rutas de nave
 Route::get('nave', [NaveController::class, 'index']) ->name('nave');
-Route::get('naveInsertar', [NaveController::class, 'create']) ->name('naveCreate');
+Route::get('naveInsertar', [NaveController::class, 'formCreate']) ->name('naveFormCreate');
+Route::post('naveGuardar', [NaveController::class, 'create']) ->name('naveCreate');
 Route::get('naveUpdate/{id}', [NaveController::class, 'update']) -> name('naveUpdate')  ;
 
 
@@ -37,14 +38,13 @@ Route::get('puertobuscar', [puertoController::class, 'buscar']);
 //Rutas reserva
 Route::get('reserva', [ReservasController::class, 'index']) -> name('reserva'); 
 
-
-
+//Rutas de navmanifiestoe
+Route::get('manifiesto', [manifiestoController::class, 'index']) ->name('manifiesto');
+Route::get('manifiestoInsertar', [manifiestoController::class, 'create']) ->name('manifiestoCreate');
 
 
 //Route::get('principal', [VentasController::class, 'index']);
 //Route::get('inicioSesion', [iniciarSesionController::class, 'index']); 
 
 //Route::get('/naves/{id}', [NaveController::class, 'parametro']);//
-//Rutas de navmanifiestoe
-Route::get('manifiesto', [manifiestoController::class, 'index']) ->name('manifiesto');
-Route::get('manifiestoInsertar', [manifiestoController::class, 'create']) ->name('manifiestoCreate');
+

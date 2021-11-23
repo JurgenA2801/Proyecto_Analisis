@@ -15,11 +15,19 @@ class NaveController extends Controller
 
     }
 
-    public function create(){ 
+    public function formCreate () { 
+        return view('nave.create');
+
+
+    }
+
+
+    public function create(Request $request){ 
         $nuevaNave = new nave(); 
-        $nuevaNave -> capacidadCarga = 10; 
-        $nuevaNave -> capacidadPasajeros = 25;
+        $nuevaNave -> capacidadCarga = $request -> capacidadCarga ; 
+        $nuevaNave -> capacidadPasajeros = $request -> capacidadPasajeros;
         $nuevaNave -> save();
+        return redirect()-> route('nave');
     }
 
     public function update($id){ 
