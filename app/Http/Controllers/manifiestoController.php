@@ -11,7 +11,7 @@ class manifiestoController extends Controller
     //
     public function index(){ 
 
-        $listaDeManifiesto= manifiesto::paginate();
+        $listaDeManifiesto= manifiesto::all();
         return view('manifiesto.index', compact('listaDeManifiesto'));
 
 

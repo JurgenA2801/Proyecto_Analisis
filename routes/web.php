@@ -7,7 +7,7 @@ use App\Http\Controllers\puertoController;
 use App\Http\Controllers\ReservasController;
 use App\Models\nave; 
 use App\Models\itinerario;
-
+use App\Http\Controllers\manifiestoController;
 
 
 Route::get('/', function () {

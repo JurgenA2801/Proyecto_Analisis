@@ -10,7 +10,7 @@ class manifiesto extends Model
     use HasFactory;
    
     /*protected $fillable = ['atributo', 'atributo']; */
-    protected $table = "manifiesto"; 
+    protected $table = "manifiestos"; 
    
 
     public function listar(){ 
