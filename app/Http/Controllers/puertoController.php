@@ -42,7 +42,8 @@ class puertoController extends Controller
 
     public function Formupdate(puerto $puerto){ 
         
-        return view('puerto.update', compact('puerto'));
+        $itinerarios = itinerario::all();
+        return view('puerto.update', compact('puerto', 'itinerarios'));
     }
 
     public function update (Request $request, puerto $puerto){

@@ -30,8 +30,4 @@
 
 </form>
 
-  
- 
-
-
 @endsection
