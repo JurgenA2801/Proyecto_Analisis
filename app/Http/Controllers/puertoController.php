@@ -40,5 +40,18 @@ class puertoController extends Controller
         return redirect()-> route('puerto');
     }
 
+    public function Formupdate(puerto $puerto){ 
+        
+        return view('puerto.update', compact('puerto'));
+    }
 
+    public function update (Request $request, puerto $puerto){
+        
+        $puerto -> idItinerario = $request -> idItinerario; 
+        $puerto -> nombre = $request -> nombre; 
+        $puerto -> save();
+        return redirect()-> route('puerto');
+
+
+    }
 }
