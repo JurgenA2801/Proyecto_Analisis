@@ -22,7 +22,9 @@ Route::get('naveUpdate/{id}', [NaveController::class, 'update']) -> name('naveUp
 
 //Rutas itinerario
 Route::get('itinerario', [ItinerarioController::class, 'index']) -> name('itinerario');
-Route::get('itinerario_nave', [ItinerarioController::class, 'itinerario_nave']);    
+Route::get('itinerario_nave', [ItinerarioController::class, 'itinerario_nave']);
+Route::get('itinerarioInsertar', [ItinerarioController::class, 'formCreate']) ->name('itinerarioFormCreate');
+Route::post('itinerarioGuardar', [ItinerarioController::class, 'create']) ->name('itinerarioCreate');
    
 
 
