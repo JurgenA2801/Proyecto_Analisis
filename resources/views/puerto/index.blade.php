@@ -12,6 +12,7 @@
 <table class="table">
   <thead>
     <tr>
+    <th scope="col">#</th>
       <th scope="col">Itinerario</th>
       <th scope="col">Nombre</th>
     </tr>
@@ -19,6 +20,7 @@
   <tbody>
     @foreach($listaDePuertos as $item)
     <tr>
+    <td>{{$item -> id}}</td>
       <td>{{$item -> idItinerario	}}</td>
       <td>{{$item -> nombre}}</td>
     </tr>
@@ -27,15 +29,7 @@
 @endforeach
   </tbody>
 </table>
-@foreach($listaDePuertos as $item)
-    {{$item}}
-
-@endforeach
-
 </ul>
-
-{{$listaDePuertos->links()}}
-
 @endsection 
 
 

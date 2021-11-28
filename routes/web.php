@@ -25,22 +25,22 @@ Route::get('itinerario', [ItinerarioController::class, 'index']) -> name('itiner
 Route::get('itinerario_nave', [ItinerarioController::class, 'itinerario_nave']);
 Route::get('itinerarioInsertar', [ItinerarioController::class, 'formCreate']) ->name('itinerarioFormCreate');
 Route::post('itinerarioGuardar', [ItinerarioController::class, 'create']) ->name('itinerarioCreate');
-   
-
-
-//Route::get('itinerario/{id}/nave', [ItinerarioController::class, 'oneToOne']) -> name('itinerario_nave');
 
 //Rutas venta
 Route::get('venta', [ReservasController::class, 'index']);
 
 //Rutas puerto
 Route::get('puerto', [puertoController::class, 'index']) -> name('puerto'); 
-Route::get('puertobuscar', [puertoController::class, 'buscar']); 
+//Route::get('puertobuscar', [puertoController::class, 'buscar']); 
+Route::get('puertoInsertar', [puertoController::class, 'formCreate']) -> name('puertoFormCreate'); 
+Route::post('puertoGuardar', [puertoController::class, 'create']) ->name('puertoCreate');
 
 //Rutas reserva
 Route::get('reserva', [ReservasController::class, 'index']) -> name('reserva'); 
+Route::get('reservaInsertar', [ReservasController::class, 'formCreate']) ->name('reservaFormCreate');
+Route::post('reservaGuardar', [ReservasController::class, 'create']) ->name('reservaCreate');
 
-//Rutas de navmanifiestoe
+//Rutas de manifiestoe
 Route::get('manifiesto', [manifiestoController::class, 'index']) ->name('manifiesto');
 Route::get('manifiestoInsertar', [manifiestoController::class, 'create']) ->name('manifiestoCreate');
 

@@ -33,7 +33,7 @@
 
 </ul>
 
-{{$listaDeReserva->links()}}
+
 @endsection
 
 
