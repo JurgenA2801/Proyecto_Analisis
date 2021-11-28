@@ -20,8 +20,13 @@
   <tbody>
     @foreach($listaDeReserva as $item)
     <tr>
+     
       <td>{{$item -> idNave	}}</td>
-      <td>{{$item -> idTipoReserva}}</td>
+      @if ( $item -> idTipoReserva === 1)
+        <td>Pasajero</td> 
+      @else 
+        <td>Carga</td> 
+      @endif
       <td>₡{{$item -> precio}}</td>
       
     
