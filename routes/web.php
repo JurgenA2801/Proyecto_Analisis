@@ -17,6 +17,7 @@ Route::get('/', function () {
 Route::get('nave', [NaveController::class, 'index']) ->name('nave');
 Route::get('naveInsertar', [NaveController::class, 'formCreate']) ->name('naveFormCreate');
 Route::post('naveGuardar', [NaveController::class, 'create']) ->name('naveCreate');
+
 Route::get('nave/{nave}/Update', [NaveController::class, 'Formupdate']) -> name('naveFormUpdate');
 Route::put('naveUpdate/{nave}', [NaveController::class, 'update']) -> name('naveUpdate');
 
@@ -35,6 +36,9 @@ Route::get('puerto', [puertoController::class, 'index']) -> name('puerto');
 //Route::get('puertobuscar', [puertoController::class, 'buscar']); 
 Route::get('puertoInsertar', [puertoController::class, 'formCreate']) -> name('puertoFormCreate'); 
 Route::post('puertoGuardar', [puertoController::class, 'create']) ->name('puertoCreate');
+//
+Route::get('puerto/{puerto}/Update', [PuertoController::class, 'Formupdate']) -> name('puertoFormUpdate');
+Route::put('puertoUpdate/{puerto}', [PuertoController::class, 'update']) -> name('puertoUpdate');
 
 //Rutas reserva
 Route::get('reserva', [ReservasController::class, 'index']) -> name('reserva'); 

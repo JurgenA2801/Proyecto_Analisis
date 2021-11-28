@@ -6,14 +6,15 @@
 
 @section('contenido') 
 
-<h1>Nuevo puerto</h1> 
+<h1>Actualizar puerto</h1> 
 
-<form action="{{route('puertoCreate')}}" method="POST"> 
+<form action="{{route('puertoUpdate')}}" method="POST"> 
   @csrf
-
+  @method('put')
   <div class="form-group col-3">
     <label for="nombreInput">Nombre</label>
     <input type="text" class="form-control" id="nombreInput" name="nombre">  
+    value="{{$puerto -> nombre}}">
   </div>
 
   <div class="form-group col-3">
