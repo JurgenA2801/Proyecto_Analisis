@@ -30,11 +30,18 @@ class NaveController extends Controller
         return redirect()-> route('nave');
     }
 
-    public function update($id){ 
-        $actualizarNave = nave::find($id);
-        $actualizarNave-> capacidadCarga = 10;
-        $actualizarNave->save();
-
+    public function Formupdate(nave $nave){ 
+        
+        return view('nave.update', compact('nave'));
     }
 
+    public function update (Request $request, nave $nave){
+        
+        $nave -> capacidadCarga = $request -> capacidadCarga; 
+        $nave -> capacidadPasajeros = $request -> capacidadPasajeros; 
+        $nave -> save();
+        return redirect()-> route('nave');
+
+
+    }
 }
