@@ -15,18 +15,26 @@
     <label for="idTipoReservaInput">Tipo de servicios</label>
     <select class="form-control" id="idTipoReservaInput" name="idTipoReserva">
 
-    @foreach ($tipoServicio as $service)
-      <option value="{{$service->id}}">{{$service->tipo}}</option>
-    @endforeach
+    @if ( $reserva -> idTipoReserva === 1)
+    <option value="1">Pasajero</option>
+    <option value="2">Carga</option>
+      @else 
+      <option value="2">Carga</option>
+      <option value="1">Pasajero</option>    
+      @endif
     </select>
   </div>
 
   <div class="form-group col-3">
     <label for="idNaveInput">Nave</label>
     <select class="form-control" id="idNaveInput" name="idNave">
-
+    
     @foreach ($nave as $naves)
+    @if ($reserva -> idNave === $naves->id)
+      <option value="{{$naves->id}}" selected>{{$naves->id}}</option>
+    @else
       <option value="{{$naves->id}}">{{$naves->id}}</option>
+    @endif   
     @endforeach
     </select>
   </div>

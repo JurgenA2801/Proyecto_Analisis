@@ -49,6 +49,7 @@ Route::get('reservaInsertar', [ReservasController::class, 'formCreate']) ->name(
 Route::post('reservaGuardar', [ReservasController::class, 'create']) ->name('reservaCreate');
 Route::get('reserva/{reserva}/Update', [ReservasController::class, 'Formupdate']) -> name('ReservaFormUpdate');
 Route::put('reservaUpdate/{reserva}', [ReservasController::class, 'update']) -> name('reservaUpdate');
+
 //Rutas de manifiestoe
 Route::get('manifiesto', [manifiestoController::class, 'index']) ->name('manifiesto');
 Route::get('manifiestoInsertar', [manifiestoController::class, 'create']) ->name('manifiestoCreate');

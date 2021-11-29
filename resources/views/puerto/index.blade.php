@@ -12,7 +12,7 @@
 <table class="table">
   <thead>
     <tr>
-    <th scope="col">#</th>
+      <th scope="col">#</th>
       <th scope="col">Itinerario</th>
       <th scope="col">Nombre</th>
     </tr>
@@ -20,9 +20,10 @@
   <tbody>
     @foreach($listaDePuertos as $item)
     <tr>
-    <td>{{$item -> id}}</td>
+      <td>{{$item -> id}}</td>
       <td>{{$item -> idItinerario	}}</td>
       <td>{{$item -> nombre}}</td>
+      <td><a href="{{Route ('puertoFormUpdate', $item ->id )}}"> Editar</a> </td> 
     </tr>
     
      

@@ -11,6 +11,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th scope="col">#</th>
       <th scope="col">Capacidad de carga</th>
       <th scope="col">Capacidad de pasajeros</th>
     </tr>
@@ -18,8 +19,10 @@
   <tbody>
     @foreach($listaDeNaves as $item)
     <tr>
+      <td>{{$item -> id	}}</td>
       <td>{{$item -> capacidadCarga	}}</td>
       <td>{{$item -> capacidadPasajeros}}</td>
+      <td><a href="{{Route ('naveFormUpdate', $item -> id)}}"> Editar</a> </td> 
     </tr>     
 @endforeach
   </tbody>
