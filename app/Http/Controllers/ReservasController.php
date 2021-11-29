@@ -35,4 +35,18 @@ class ReservasController extends Controller
 
     }
 
+    public function Formupdate(reserva $reserva){ 
+        $tipoServicio = tipoServicio::all();
+        $nave = nave::all();
+        return view('reserva.update', compact('reserva','tipoServicio','nave'));
+    }
+
+    public function update (Request $request, reserva $Reserva){
+        
+        $Reserva -> idNave = $request -> idNave; 
+        $Reserva -> idTipoReserva = $request -> idTipoReserva; 
+        $Reserva -> precio = $request -> precio;
+        $Reserva -> save();
+        return redirect()-> route('reserva');
+    }
 }

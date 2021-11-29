@@ -27,6 +27,9 @@ Route::get('itinerario', [ItinerarioController::class, 'index']) -> name('itiner
 Route::get('itinerario_nave', [ItinerarioController::class, 'itinerario_nave']);
 Route::get('itinerarioInsertar', [ItinerarioController::class, 'formCreate']) ->name('itinerarioFormCreate');
 Route::post('itinerarioGuardar', [ItinerarioController::class, 'create']) ->name('itinerarioCreate');
+//
+Route::get('itinerario/{itinerario}/Update', [ItinerarioController::class, 'Formupdate']) -> name('itinerarioFormUpdate');
+Route::put('itinerarioUpdate/{itinerario}', [ItinerarioController::class, 'update']) -> name('itinerarioUpdate');
 
 //Rutas venta
 Route::get('venta', [ReservasController::class, 'index']);
@@ -44,7 +47,8 @@ Route::put('puertoUpdate/{puerto}', [PuertoController::class, 'update']) -> name
 Route::get('reserva', [ReservasController::class, 'index']) -> name('reserva'); 
 Route::get('reservaInsertar', [ReservasController::class, 'formCreate']) ->name('reservaFormCreate');
 Route::post('reservaGuardar', [ReservasController::class, 'create']) ->name('reservaCreate');
-
+Route::get('reserva/{reserva}/Update', [ReservasController::class, 'Formupdate']) -> name('ReservaFormUpdate');
+Route::put('reservaUpdate/{reserva}', [ReservasController::class, 'update']) -> name('reservaUpdate');
 //Rutas de manifiestoe
 Route::get('manifiesto', [manifiestoController::class, 'index']) ->name('manifiesto');
 Route::get('manifiestoInsertar', [manifiestoController::class, 'create']) ->name('manifiestoCreate');

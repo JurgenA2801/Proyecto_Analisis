@@ -37,6 +37,20 @@ class ItinerarioController extends Controller
         $nuevoItinerario -> save();
         return redirect()-> route('itinerario');
     }
+    public function Formupdate(itinerario $itinerario){ 
+        $nave = nave::all();
+        return view('itinerario.update', compact('itinerario','nave'));
+    }
+
+    public function update (Request $request, itinerario $Itinerario){
+        
+        $Itinerario -> idNave = $request -> idNave;
+        $Itinerario -> fechaInicio = $request -> fechaInicio ; 
+        $Itinerario -> fechaFinal = $request -> fechaFinal;
+        $Itinerario -> save();
+        return redirect()-> route('itinerario');
+    }
+
 
     //uno a uno
    /* public function one($id){         
