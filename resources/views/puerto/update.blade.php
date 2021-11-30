@@ -23,7 +23,13 @@
     <select class="form-control" id="idItinerarioInput" name="idItinerario">
 
     @foreach ($itinerarios as $itinerario)
+     
+    @if ($puerto -> idItinerario === $itinerario->id)
+      <option value="{{$itinerario->id}}" selected>{{$itinerario->id}}</option>
+    @else
       <option value="{{$itinerario->id}}">{{$itinerario->id}}</option>
+    @endif   
+
     @endforeach
 
     </select>

@@ -8,6 +8,7 @@
 @section('contenido')
 <h1>Naves</h1>
 <ul>
+<a href="{{route('naveFormCreate')}}"> Agregar</a> 
 <table class="table">
   <thead>
     <tr>

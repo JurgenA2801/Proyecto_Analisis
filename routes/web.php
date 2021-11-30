@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItinerarioController;
 use App\Http\Controllers\puertoController;
 use App\Http\Controllers\ReservasController;
+use App\Http\Controllers\InformesController;
 use App\Models\nave; 
 use App\Models\itinerario;
 use App\Http\Controllers\manifiestoController;
@@ -49,11 +50,19 @@ Route::get('reservaInsertar', [ReservasController::class, 'formCreate']) ->name(
 Route::post('reservaGuardar', [ReservasController::class, 'create']) ->name('reservaCreate');
 Route::get('reserva/{reserva}/Update', [ReservasController::class, 'Formupdate']) -> name('ReservaFormUpdate');
 Route::put('reservaUpdate/{reserva}', [ReservasController::class, 'update']) -> name('reservaUpdate');
+Route::get('reservaPagar/{reserva}', [ReservasController::class, 'pagar']) -> name('reservaPagar');
+
 
 //Rutas de manifiestoe
 Route::get('manifiesto', [manifiestoController::class, 'index']) ->name('manifiesto');
-Route::get('manifiestoInsertar', [manifiestoController::class, 'create']) ->name('manifiestoCreate');
+Route::get('manifiestoInsertar', [manifiestoController::class, 'create']) ->name('manifiestoCreate'); 
 
+//Rutas de informes 
+Route::get('informes', [InformesController::class, 'index']) ->name('informes');
+Route::get('informes/nave_ruta', [InformesController::class, 'formBuscarNave']) ->name('formBuscarNave');
+Route::post('informes/Buscarnave', [InformesController::class, 'nave_ruta']) ->name('nave_ruta');
+Route::get('informePuertosRuta/{itinerario}', [InformesController::class, 'ruta_puerto']) ->name('ruta_puerto');
+Route::get('informeIngresos', [InformesController::class, 'ingresos']) ->name('ingresos');
 
 //Route::get('principal', [VentasController::class, 'index']);
 //Route::get('inicioSesion', [iniciarSesionController::class, 'index']); 

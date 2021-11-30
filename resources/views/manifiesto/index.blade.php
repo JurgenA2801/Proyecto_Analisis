@@ -6,11 +6,12 @@
 @endsection
 
 @section('contenido')
-<h1>manifiesto</h1>
+<h1>Manifiestos</h1>
 <ul>
 <table class="table">
   <thead>
     <tr>
+      <th scope="col">#</th>
       <th scope="col">Puerto</th>
       <th scope="col">Tipo</th>
       <th scope="col">Nave</th>
@@ -20,6 +21,7 @@
   <tbody>
     @foreach($listaDeManifiesto as $item)
     <tr>
+      <td>{{$item -> id}}</td>
       <td>{{$item -> idPuertoOrigen	}}</td>
       <td>{{$item -> tipo}}</td>
       <td>{{$item -> idNave}}</td>

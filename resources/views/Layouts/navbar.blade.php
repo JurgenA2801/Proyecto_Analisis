@@ -26,9 +26,15 @@
       <li class="nav-item">
         <a class="nav-link" href="{{Route ('puerto') }}" style="color:#FFF;">Puertos</a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link" href="{{Route ('manifiesto') }}" style="color:#FFF;">Manifiesto</a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{Route ('informes') }}" style="color:#FFF;">Informes</a>
+      </li>
+
     </ul>
   
 </div>

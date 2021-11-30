@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\reserva;
 use App\Models\tipoServicio;
 use App\Models\nave;
+use App\Models\venta;
 use Illuminate\Http\Request;
 
 class ReservasController extends Controller
@@ -29,7 +30,8 @@ class ReservasController extends Controller
         $nuevaReserva = new Reserva(); 
         $nuevaReserva -> idNave = $request -> idNave; 
         $nuevaReserva -> idTipoReserva = $request -> idTipoReserva; 
-        $nuevaReserva -> precio = $request -> precio;
+        $nuevaReserva -> precio = $request -> precio; 
+        $nuevaReserva -> estado = $request -> estado;
         $nuevaReserva -> save();
         return redirect()-> route('reserva');
 
@@ -46,6 +48,19 @@ class ReservasController extends Controller
         $Reserva -> idNave = $request -> idNave; 
         $Reserva -> idTipoReserva = $request -> idTipoReserva; 
         $Reserva -> precio = $request -> precio;
+        $Reserva -> estado = 0;
+        $Reserva -> save();
+        return redirect()-> route('reserva');
+    } 
+
+    public function pagar(reserva $Reserva) { 
+
+        $venta = new venta();
+        $Reserva -> estado = 1;
+        $venta -> idReserva = $Reserva -> id;
+        date_default_timezone_set('America/Costa_Rica');  
+        $venta -> fecha = date('Y-m-d\TH:i:s');
+        $venta -> save();
         $Reserva -> save();
         return redirect()-> route('reserva');
     }

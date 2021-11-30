@@ -36,7 +36,13 @@
     <input type="number" class="form-control" id="PrecioInput" name="precio">    
   </div>
 
- 
+  <div class="form-group col-3">
+    <label for="estadoInput" hidden>Estado</label>
+    <select class="form-control" id="estadoInput" name="estado" hidden>
+      <option value= 0 selected>Reservada</option>
+      <option value= 1 >Pagada</option>
+    </select>
+  </div>
  
 
 

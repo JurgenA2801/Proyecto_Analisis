@@ -53,8 +53,5 @@ class ItinerarioController extends Controller
     }
 
 
-    //uno a uno
-   /* public function one($id){         
-        return nave::find($id)->itinerario;
-    } */
+   
 }

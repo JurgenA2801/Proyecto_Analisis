@@ -8,7 +8,9 @@
 
 <title>Lista de itinerarios</title>
 <h1>Itinerarios</h1>
+
 <ul>
+<a href="{{route('itinerarioFormCreate')}}"> Agregar</a> 
 <table class="table">
   <thead>
     <tr>

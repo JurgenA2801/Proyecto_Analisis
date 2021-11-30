@@ -19,7 +19,8 @@ class CreateReservaTable extends Migration
             $table->foreign('idNave')->references('id')->on('nave');
             $table->unsignedBigInteger('idTipoReserva');
             $table->foreign('idTipoReserva')->references('id')->on('tipo_reserva');
-            $table->double('precio');
+            $table->double('precio'); 
+            $table -> boolean('estado'); //1=pagado, 0=reservado pero no pagado
             $table->timestamps();
         });
     }

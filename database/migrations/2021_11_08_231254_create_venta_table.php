@@ -18,6 +18,7 @@ class CreateVentaTable extends Migration
             $table->unsignedBigInteger('idReserva');
             $table->foreign('idReserva')->references('id')->on('reserva');
             $table->Datetime('fecha');
+            $table->timestamps();
         });
     }
 

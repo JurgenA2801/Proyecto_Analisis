@@ -9,6 +9,7 @@
 <title>Lista de puertos</title>
 <h1>Puertos</h1>
 <ul>
+<a href="{{route('puertoFormCreate')}}"> Agregar</a>  
 <table class="table">
   <thead>
     <tr>
