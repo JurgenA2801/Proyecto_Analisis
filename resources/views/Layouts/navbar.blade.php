@@ -12,27 +12,14 @@
 
     
       <li class="nav-item">
-        <a class="nav-link" href="{{Route ('reserva') }}" style="color:#FFF;">Reservas</a>
+        <a class="nav-link" href="{{Route ('usuariosainiciar') }}" style="color:#FFF;">Encargado de ventas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{Route ('usuariosainiciar') }}" style="color:#FFF;">Encargado de nave</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="{{Route ('itinerario') }}" style="color:#FFF;" >Itinerarios</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="{{Route ('nave') }}" style="color:#FFF;">Naves</a>
-      </li>
-       
-      <li class="nav-item">
-        <a class="nav-link" href="{{Route ('puerto') }}" style="color:#FFF;">Puertos</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="{{Route ('manifiesto') }}" style="color:#FFF;">Manifiesto</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="{{Route ('informes') }}" style="color:#FFF;">Informes</a>
+        <a class="nav-link" href="{{Route ('usuariosainiciar') }}" style="color:#FFF;">Gerente </a>
       </li>
 
     </ul>

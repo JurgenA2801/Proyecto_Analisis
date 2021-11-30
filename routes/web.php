@@ -6,6 +6,7 @@ use App\Http\Controllers\ItinerarioController;
 use App\Http\Controllers\puertoController;
 use App\Http\Controllers\ReservasController;
 use App\Http\Controllers\InformesController;
+use App\Http\Controllers\usuariosController;
 use App\Models\nave; 
 use App\Models\itinerario;
 use App\Http\Controllers\manifiestoController;
@@ -69,3 +70,8 @@ Route::get('informeIngresos', [InformesController::class, 'ingresos']) ->name('i
 
 //Route::get('/naves/{id}', [NaveController::class, 'parametro']);//
 
+//Rutas de usuarios
+Route::get('usuariosa', [usuariosController::class, 'formCreate']) ->name('usuariosaformCreate');
+Route::post('usuariosGuardar', [usuariosController::class, 'create']) ->name('usuarioCreate');
+Route::get('iniciarsesión', [usuariosController::class, 'forminiciarsesión']) ->name('usuariosainiciar');
+Route::post('usuariosvalidar', [usuariosController::class, 'iniciarsesión']) ->name('validar');

@@ -7,6 +7,7 @@
 
 @section('contenido')
 <h1>Manifiestos</h1>
+<a href="{{route('itinerarioFormCreate')}}"> Agregar</a> 
 <ul>
 <table class="table">
   <thead>

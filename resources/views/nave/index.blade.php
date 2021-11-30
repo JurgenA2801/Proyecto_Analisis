@@ -28,7 +28,7 @@
 @endforeach
   </tbody>
 </table>
-
+<a href="{{route('informes')}}">Volver</a>
 </ul>
 @endsection
 
