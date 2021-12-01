@@ -57,6 +57,22 @@ class InformesController extends Controller
         }
 
         return view('informes.ingresos', compact('total', 'fecha'));
-    }   
+    }  
+    public function cierreCaja () { 
+
+        $listaDeVentas = reserva::all();
+        $total = 0.0;
+        date_default_timezone_set('America/Costa_Rica');  
+        $fecha = date('Y-m-d | H:i');
+        foreach($listaDeVentas as $item) { 
+
+                if ($item -> estado == true) {
+                 $total += $item -> precio;
+
+                }
+        }
+
+        return view('informes.cierreCaja', compact('total', 'fecha'));
+    }  
 
 }

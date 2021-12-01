@@ -18,6 +18,7 @@
     <a href="{{route ('itinerario')}}" class="btn btn-primary">Itinerarios</a>
     <a href="{{route ('nave')}}" class="btn btn-primary">Naves</a>
     <a href="{{route ('puerto')}}" class="btn btn-primary">Puertos</a>   
+    <a href="{{route ('cierreCaja')}}" class="btn btn-primary">Cierre Caja</a>   
   </div>
   <div class="card-footer text-muted">
     Naviera PEP

@@ -66,6 +66,8 @@ Route::get('informes/nave_ruta', [InformesController::class, 'formBuscarNave']) 
 Route::post('informes/Buscarnave', [InformesController::class, 'nave_ruta']) ->name('nave_ruta');
 Route::get('informePuertosRuta/{itinerario}', [InformesController::class, 'ruta_puerto']) ->name('ruta_puerto');
 Route::get('informeIngresos', [InformesController::class, 'ingresos']) ->name('ingresos');
+//
+Route::get('cierreCaja', [InformesController::class, 'cierreCaja']) ->name('cierreCaja');
 
 //Route::get('principal', [VentasController::class, 'index']);
 //Route::get('inicioSesion', [iniciarSesionController::class, 'index']); 
