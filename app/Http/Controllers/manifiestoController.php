@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\manifiesto;
-
+use App\Models\nave;
+use App\Models\puerto;
 
 class manifiestoController extends Controller
 {
@@ -14,21 +15,28 @@ class manifiestoController extends Controller
         $listaDeManifiesto= manifiesto::all();
         return view('manifiesto.index', compact('listaDeManifiesto'));
 
-
     }
-    public function formCreate () { 
-        return view('manifiesto.create');
+    
+    public function Formcreate(){ 
+        $listaDeNaves= nave::all();
+        $listaDePuertos= puerto::all();
+        return view('manifiesto.create', compact('listaDeNaves','listaDePuertos'));
+}
 
 
-    }
-    public function create(request $request){ 
-        
-       $nuevamanifiesto = new manifiesto(); 
-        $nuevamanifiesto -> capacidadCarga = 10; 
-        $nuevamanifiesto -> capacidadPasajeros = 25;
-        $nuevamanifiesto -> save();
+    public function create(Request $request){ 
+
+        $nuevoManifiesto = new manifiesto(); 
+        $nuevoManifiesto -> idPuertoOrigen = $request -> idPuertoOrigen; 
+        $nuevoManifiesto -> tipo = $request -> tipo; 
+        $nuevoManifiesto -> fecha = $request -> fecha; 
+        $nuevoManifiesto -> idNave = $request -> idNave;
+        $nuevoManifiesto -> save();
         return redirect()-> route('manifiesto');
-    }
+
+
+}
+
 
     
 }
