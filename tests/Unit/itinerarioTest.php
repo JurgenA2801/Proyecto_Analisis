@@ -27,8 +27,8 @@ class itinerarioTest extends TestCase
 
       
         
-      // $response = $this->post('/itinerarioGuardar', $testItinerario);
-      // $response->assertStatus(302);
+       $response = $this->post('/itinerarioGuardar', $testItinerario);
+       $response->assertStatus(302);
 
         //Prueba de actualizar
         $itinerarioTest = itinerario::find(1);
