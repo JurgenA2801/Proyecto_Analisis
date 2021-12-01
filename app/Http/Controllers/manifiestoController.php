@@ -16,12 +16,18 @@ class manifiestoController extends Controller
 
 
     }
-    public function create(){ 
+    public function formCreate () { 
         return view('manifiesto.create');
-       /* $nuevamanifiesto = new manifiesto(); 
+
+
+    }
+    public function create(request $request){ 
+        
+       $nuevamanifiesto = new manifiesto(); 
         $nuevamanifiesto -> capacidadCarga = 10; 
         $nuevamanifiesto -> capacidadPasajeros = 25;
-        $nuevamanifiesto -> save();*/
+        $nuevamanifiesto -> save();
+        return redirect()-> route('manifiesto');
     }
 
     

@@ -56,8 +56,8 @@ Route::get('reservaPagar/{reserva}', [ReservasController::class, 'pagar']) -> na
 
 //Rutas de manifiestoe
 Route::get('manifiesto', [manifiestoController::class, 'index']) ->name('manifiesto');
-Route::get('manifiestoInsertar', [manifiestoController::class, 'create']) ->name('manifiestoCreate'); 
-
+Route::get('manifiestoInsertar', [manifiestoController::class, 'formCreate']) ->name('manifiestoCreate'); 
+Route::post('manifiestoGuardar', [manifiestoController::class, 'create']) ->name('manifiestoCreate');
 //Rutas de informes 
 Route::get('informes', [InformesController::class, 'index']) ->name('informes');
 Route::get('informes/nave_ruta', [InformesController::class, 'formBuscarNave']) ->name('formBuscarNave');
