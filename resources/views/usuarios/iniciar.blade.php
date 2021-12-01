@@ -24,7 +24,7 @@
   
   </div>
   <button type="submit" class="btn btn-primary">Aceptar</button>
-  <a href="{{route('usuariosaformCreate')}}"> Registrace</a> 
+  <a href="{{route('usuariosaformCreate')}}"> Registrarse</a> 
 </form>
 
 @endsection
